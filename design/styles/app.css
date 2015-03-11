@@ -1,0 +1,22 @@
+.r-body {
+  margin: 30px auto;
+}
+
+.r-container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.r-content {
+  margin-top: 72px;
+}
+
+.r-block {
+  margin: 40px 0;
+}
+
+.ui.cards > .card > .extra a:not(.ui), .ui.card > .extra a.r-price {
+  padding-top: 3px;
+  display: block;
+  color: #C02;
+}
