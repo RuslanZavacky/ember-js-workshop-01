@@ -1,22 +1,41 @@
 .r-body {
-  margin: 30px auto;
+    margin: 30px auto;
 }
 
 .r-container {
-  width: 800px;
-  margin: 0 auto;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .r-content {
-  margin-top: 72px;
+    margin-top: 72px;
 }
 
 .r-block {
-  margin: 40px 0;
+    margin: 40px 0;
+}
+
+.r-totals {
+
+}
+
+.r-totals__subtotal {
+    margin-bottom: 14px;
+}
+
+.r-totals__label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.r-totals__price {
+    color: #C02;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .ui.cards > .card > .extra a:not(.ui), .ui.card > .extra a.r-price {
-  padding-top: 3px;
-  display: block;
-  color: #C02;
+    padding-top: 3px;
+    display: block;
+    color: #C02;
 }
