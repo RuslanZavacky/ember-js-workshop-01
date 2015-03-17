@@ -34,6 +34,15 @@
     font-weight: 700;
 }
 
+.r-cart {
+    margin-top: 20px;
+}
+
+.r-cart__quantity {
+    font-size: 14px;
+    padding: 0 15px;
+}
+
 .ui.cards > .card > .extra a:not(.ui), .ui.card > .extra a.r-price {
     padding-top: 3px;
     display: block;
