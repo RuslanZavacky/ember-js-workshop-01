@@ -1,0 +1,28 @@
+<div id="cart-page" class="r-block">
+  <div class="r-cart-page">
+    {{e-cart-steps step="checkout"}}
+
+    <div class="r-cart">
+
+      <div class="ui grid">
+        <div class="row">
+          <div class="eleven wide column">
+            <h2>Payment Information</h2>
+
+            {{e-cart-payment}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="eleven wide column">
+            {{e-cart-items items=items}}
+          </div>
+
+          <div class="five wide column r-totals">
+            {{e-cart-totals totals=totals}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

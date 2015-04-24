@@ -1,0 +1,35 @@
+<div class="r-steps ui steps">
+  {{#link-to 'cart' class="step" classNameBindings="isConfirmation:disabled"}}
+    {{#if isConfirmation}}
+      <i class="truck icon"></i>
+    {{else}}
+      <i class="cart icon"></i>
+    {{/if}}
+
+    <div class="content">
+      <div class="title">Cart</div>
+      <div class="description">Review your items</div>
+    </div>
+  {{/link-to}}
+
+  {{#link-to 'checkout' class="step" classNameBindings="isCart:disabled isConfirmation:disabled"}}
+    {{#if isConfirmation}}
+      <i class="truck icon"></i>
+    {{else}}
+      <i class="payment icon"></i>
+    {{/if}}
+
+    <div class="content">
+      <div class="title">Checkout</div>
+      <div class="description">Proceed with Payment</div>
+    </div>
+  {{/link-to}}
+
+  {{#link-to 'confirmation' class="step" classNameBindings="isCheckout:disabled isCart:disabled"}}
+    <i class="check circle outline icon"></i>
+    <div class="content">
+      <div class="title">Confirmation</div>
+      <div class="description">Track your order</div>
+    </div>
+  {{/link-to}}
+</div>

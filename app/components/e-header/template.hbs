@@ -1,0 +1,12 @@
+<div class="ui fixed menu r-menu">
+  <div class="r-container">
+      {{#link-to 'catalog' class="item"}}
+        <i class="home icon"></i>
+        Catalog
+      {{/link-to}}
+      {{#link-to 'cart' class="item"}}
+        <i class="cart icon"></i>
+        Cart {{#if cartItemsCount}}<div class="r-menu__cart-count floating ui red label">{{cartItemsCount}}</div>{{/if}}
+      {{/link-to}}
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="ui card">
+  <div class="image dimmable">
+    {{#if item.heart}}
+      <a class="ui corner red label"><i class="heart icon"></i></a>
+    {{/if}}
+
+    <img src="http://lorempixel.com/229/190/abstract/{{i}}">
+  </div>
+  <div class="content">
+    <div class="header">{{item.title}}</div>
+    <div class="meta">
+      {{e-stars stars=item.rating}}
+    </div>
+  </div>
+  <div class="extra content">
+    <a {{action "addToCart"}} class="right floated">
+      <div class="ui orange button mini">
+        Add to Cart
+      </div>
+    </a>
+    <a class="r-price">
+      ${{item.price}}
+    </a>
+  </div>
+</div>
