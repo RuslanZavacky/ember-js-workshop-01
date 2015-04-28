@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['column'],
+  classNames: ['column', 'r-grid-item'],
   item: null,
   i: 0,
 

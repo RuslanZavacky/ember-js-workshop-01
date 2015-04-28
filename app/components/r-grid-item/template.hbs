@@ -9,15 +9,23 @@
   <div class="content">
     <div class="header">{{item.title}}</div>
     <div class="meta">
-      {{e-stars stars=item.rating}}
+      {{r-stars stars=item.rating}}
     </div>
   </div>
   <div class="extra content">
-    <a {{action "addToCart"}} class="right floated">
-      <div class="ui orange button mini">
-        Add to Cart
-      </div>
-    </a>
+    {{#if holdingCart}}
+      <a class="right floated" style="position: relative;">
+        <div class="ui orange button mini">
+          Loading...
+        </div>
+      </a>
+    {{else}}
+      <a {{action "addToCart"}} class="right floated">
+        <div class="ui orange button mini">
+          Add to Cart
+        </div>
+      </a>
+    {{/if}}
     <a class="r-price">
       ${{item.price}}
     </a>

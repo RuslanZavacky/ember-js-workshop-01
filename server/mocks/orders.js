@@ -3,13 +3,12 @@ module.exports = function(app) {
   var orderRouter = express.Router();
   var orderProductRouter = express.Router();
   var order = {
-    products: []
+    'order/products': []
   };
+  var lastId = 1;
 
   orderRouter.get('/', function(req, res) {
-    res.send({
-      'order': []
-    });
+    res.send(order);
   });
 
   orderRouter.post('/', function(req, res) {
@@ -35,17 +34,26 @@ module.exports = function(app) {
   });
 
   orderProductRouter.post('/', function(req, res) {
-    console.log(req.body);
+    var params = req.body;
+    var orderProduct = params['order/product'];
 
-    res.status(201).end();
+    orderProduct.id = lastId++;
+    order['order/products'].push(orderProduct);
+
+    res.status(200).json(order).end();
   });
 
   orderProductRouter.put('/', function(req, res) {
-    res.send({
-      'order/product': {
-        id: req.params.id
-      }
+    var params = req.body;
+    var orderProduct = params['order/product'];
+
+    var item = order['order/products'].filter(function(product) {
+      return product.code == orderProduct.code;
     });
+
+    item[0].quantity += 1;
+
+    res.status(200).json(order).end();
   });
 
   orderProductRouter.delete('/', function(req, res) {

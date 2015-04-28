@@ -1,9 +1,9 @@
 <div id="list-page" class="r-block">
-  {{#e-grid}}
+  {{#r-grid}}
     <div class="ui four column grid">
       {{#each model as |product i|}}
-        {{e-grid-item item=product i=i addToCart="addToCart"}}
+        {{r-grid-item item=product i=i addToCart="addToCart" holdingCart=holdingCart}}
       {{/each}}
     </div>
-  {{/e-grid}}
+  {{/r-grid}}
 </div>

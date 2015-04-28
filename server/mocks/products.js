@@ -7,6 +7,7 @@ module.exports = function (app) {
       'product': [
         {
           id: 1,
+          code: 'RZ-0000-01',
           title: 'Zeiss HD5 Conquest 5-25X50 Rifle Scope',
           rating: 5,
           price: 1029.95,
@@ -15,6 +16,7 @@ module.exports = function (app) {
           description: 'Zeiss HD5 Conquest 5-25X50 Rifle Scopes are the most compact high-magnification riflescopes in the industry and the most powerful in the HD5 line.'
         }, {
           id: 2,
+          code: 'RZ-0000-02',
           title: 'Leupold Mark 6 3-18x44mm Rifle Scope',
           rating: 5,
           price: 2199.99,
